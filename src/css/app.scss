@@ -1,1 +1,8 @@
 // app global css in SCSS form
+// app에서 적용하기 위한 css
+
+// google web font 내 제공되는 폰트 사이트 import
+@import url('https://fonts.googleapis.com/css2? family= Nanum+Gothic:wght@400;700;800 & display=swap');
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}

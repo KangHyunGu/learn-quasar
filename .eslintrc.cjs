@@ -35,11 +35,11 @@ module.exports = {
     // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-files
     // required to lint *.vue files
     'vue',
-    
+
     // https://github.com/typescript-eslint/typescript-eslint/issues/389#issuecomment-509292674
     // Prettier has not been included as plugin to avoid performance impact
     // add it as an extension for your IDE
-    
+
   ],
 
   globals: {
@@ -56,9 +56,12 @@ module.exports = {
   },
 
   // add your custom rules here
+  // EsLint 규칙 설정 on/off
   rules: {
-    
+
     'prefer-promise-reject-errors': 'off',
+    // vue/multi-word-component-names(on) : vue에서는 component의 이름을 항상 단일 단어가 아닌 단어의 조합을 해서 하는 것을 추천
+    'vue/multi-word-component-names': 'off',
 
     // allow debugger during development only
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'

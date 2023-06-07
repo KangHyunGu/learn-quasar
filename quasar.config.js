@@ -42,7 +42,8 @@ module.exports = configure(function (/* ctx */) {
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-      'roboto-font', // optional, you are not bound to it
+      //quasar의 default font는 'roboto-font'이고 이 프로젝트에선 사용하지 않을것이기 때문에 주석처리
+      // 'roboto-font', // optional, you are not bound to it
       'material-icons', // optional, you are not bound to it
     ],
 
