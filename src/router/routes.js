@@ -7,7 +7,8 @@ const routes = [
       { path: 'typography', component: () => import('pages/Typography.vue') },
       { path: 'colors', component: () => import('pages/Colors.vue') },
       { path: 'spacing', component: () => import('pages/Spacing.vue') },
-      { path: 'breakpoint', component: () => import('pages/BreakPoints.vue') }
+      { path: 'breakpoint', component: () => import('pages/BreakPoints.vue') },
+      { path: 'classes-variables', component: () => import('pages/ClassesVariables.vue') }
     ],
   },
 
