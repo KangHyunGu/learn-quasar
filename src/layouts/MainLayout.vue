@@ -2,24 +2,17 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <q-btn
-          flat
-          rounded
-          dense
-          :icon="darkModeIcon"
-          @click="toggleDarkMode"
-        />
+        <!-- DarkMode -->
+        <q-btn flat rounded dense :icon="darkModeIcon" @click="toggleDarkMode" />
+        <!-- / DrakMode -->
+        <q-btn round size="sm" class="q-ml-md" to="/profile">
+          <q-avatar>
+            <img src="/logo.png" />
+          </q-avatar>
+        </q-btn>
       </q-toolbar>
     </q-header>
 
@@ -32,11 +25,7 @@
           <span> Quasar v{{ $q.version }} </span>
         </q-item-label>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+        <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
       </q-list>
     </q-drawer>
 
@@ -84,12 +73,12 @@ const linksList = [
     icon: 'school',
     to: '/flex-grid-1',
   },
-  {
-    title: 'Flex Grid 2',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/flex-grid-2',
-  },
+  // {
+  //   title: 'Flex Grid 2',
+  //   caption: 'quasar.dev',
+  //   icon: 'school',
+  //   to: '/flex-grid-2',
+  // },
 ];
 </script>
 
