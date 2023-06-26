@@ -13,7 +13,7 @@ const routes = [
       {
         path: 'profile',
         component: () => import('src/pages/profile/ProfilePage.vue'),
-        children : [
+        children: [
           {
             path: '',
             component: () => import('src/pages/profile/ProfilePosts.vue')
@@ -29,6 +29,14 @@ const routes = [
         ]
       },
     ],
+  },
+  {
+    path: '/auth',
+    component: () => import('layouts/AuthLayout.vue'),
+    children: [
+      { path: 'sign-in', component: () => import('pages/auth/SignIn.vue') },
+      { path: 'sign-up', component: () => import('pages/auth/SignUp.vue') },
+    ]
   },
 
   // Always leave this as last one,

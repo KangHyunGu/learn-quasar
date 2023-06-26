@@ -2,16 +2,44 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+        <q-btn
+          flat
+          dense
+          round
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
 
         <q-toolbar-title> Quasar App </q-toolbar-title>
         <!-- DarkMode -->
-        <q-btn flat rounded dense :icon="darkModeIcon" @click="toggleDarkMode" />
+        <q-btn
+          flat
+          rounded
+          dense
+          :icon="darkModeIcon"
+          @click="toggleDarkMode"
+        />
         <!-- / DrakMode -->
-        <q-btn round size="sm" class="q-ml-md" to="/profile">
+        <q-btn round size="sm" class="q-ml-md">
           <q-avatar>
             <img src="/logo.png" />
           </q-avatar>
+          <q-menu :offset="[0, 10]">
+            <q-list style="min-width: 100px">
+              <q-item clickable v-close-popup to="/profile">
+                <q-item-section>프로필</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable v-close-popup to="/auth/sign-in">
+                <q-item-section>로그아웃</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable v-close-popup>
+                <q-item-section>Help &amp; Feedback</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
         </q-btn>
       </q-toolbar>
     </q-header>
@@ -25,7 +53,11 @@
           <span> Quasar v{{ $q.version }} </span>
         </q-item-label>
 
-        <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
+        <EssentialLink
+          v-for="link in essentialLinks"
+          :key="link.title"
+          v-bind="link"
+        />
       </q-list>
     </q-drawer>
 
