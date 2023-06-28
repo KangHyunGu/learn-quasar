@@ -28,6 +28,7 @@ const routes = [
           },
         ]
       },
+      { path: 'form-handling', component: () => import('pages/FormHandling.vue') },
     ],
   },
   {
