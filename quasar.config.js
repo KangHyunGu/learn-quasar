@@ -89,8 +89,8 @@ module.exports = configure(function (/* ctx */) {
       cssAddon: true,
       config: {
         screen: {
-          bodyClasses: true // <<< add this
-        }
+          bodyClasses: true, // <<< add this
+        },
       },
 
       // iconSet: 'material-icons', // Quasar icon set
@@ -104,7 +104,14 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: ['LocalStorage'],
+      plugins: ['LocalStorage', 'Loading'],
+      config: {
+        // loading: {
+        //   delay: 0,
+        //   message: '로딩중~!!!!',
+        //   spinnerSize: 40,
+        // },
+      },
     },
 
     // animations: 'all', // --- includes all animations

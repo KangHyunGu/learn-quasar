@@ -8,27 +8,38 @@ const routes = [
       { path: 'colors', component: () => import('pages/Colors.vue') },
       { path: 'spacing', component: () => import('pages/Spacing.vue') },
       { path: 'breakpoint', component: () => import('pages/BreakPoints.vue') },
-      { path: 'classes-variables', component: () => import('pages/ClassesVariables.vue') },
+      {
+        path: 'classes-variables',
+        component: () => import('pages/ClassesVariables.vue'),
+      },
       { path: 'flex-grid-1', component: () => import('pages/FlexGrid1.vue') },
+
       {
         path: 'profile',
         component: () => import('src/pages/profile/ProfilePage.vue'),
         children: [
           {
             path: '',
-            component: () => import('src/pages/profile/ProfilePosts.vue')
+            component: () => import('src/pages/profile/ProfilePosts.vue'),
           },
           {
             path: 'saved',
-            component: () => import('src/pages/profile/ProfileSaved.vue')
+            component: () => import('src/pages/profile/ProfileSaved.vue'),
           },
           {
             path: 'tagged',
-            component: () => import('src/pages/profile/ProfileTagged.vue')
+            component: () => import('src/pages/profile/ProfileTagged.vue'),
           },
-        ]
+        ],
       },
-      { path: 'form-handling', component: () => import('pages/FormHandling.vue') },
+      {
+        path: 'form-handling',
+        component: () => import('pages/FormHandling.vue'),
+      },
+      {
+        path: 'quasar-utils',
+        component: () => import('pages/QuasarUtils.vue'),
+      },
     ],
   },
   {
@@ -37,7 +48,7 @@ const routes = [
     children: [
       { path: 'sign-in', component: () => import('pages/auth/SignIn.vue') },
       { path: 'sign-up', component: () => import('pages/auth/SignUp.vue') },
-    ]
+    ],
   },
 
   // Always leave this as last one,
